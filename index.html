@@ -61,7 +61,9 @@
 			
 				<li><a href="/">首页</a></li>
 	        
-				<li><a href="/tags/技术积累/">技术积累</a></li>
+				<li><a href="/tags/随笔/">随笔</a></li>
+	        
+				<li><a href="/tags/Mac">Mac经验</a></li>
 	        
 			</ul>
 		</nav>
@@ -119,6 +121,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -134,12 +138,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">首页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">首页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/技术积累/">技术积累</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/随笔/">随笔</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags/Mac">Mac经验</a></li>
 		        
 				</ul>
 			</nav>
@@ -176,18 +182,19 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <p>折腾了一晚上终于搞定了自己的博客。<br>唯一遗憾的是目前imoling.cn的域名还没有备案。遗留下几个问题：</p>
-<ul>
-<li>域名绑定</li>
-<li>畅言评论系统</li>
-<li>百度分析</li>
-</ul>
+    <p>imoling’s blog 正式上线<br>imoling’s blog 正式上线</p>
+<p>$y = f(x)$<br>‘’’java<br> public static void main….<br>‘’’</p>
 
     
 
     
   </div>
   <div class="article-info article-info-index">
+    
+    <div class="article-pop-out tagcloud">
+      <i class="icon-tuding"></i>
+      <a class="article-tag-list-link color3">置顶</a>
+    </div>
     
     
 	<div class="article-tag tagcloud">
@@ -230,84 +237,63 @@
   <div class="outer">
     <div id="footer-info">
       <div class="footer-left">
-        &copy; 2020 imoling. All Rights Reserved.
+        <span id="busuanzi_container_site_pv">
+          总访问量<span id="busuanzi_value_site_pv"></span>次 |
+        </span>
+        <span id="busuanzi_container_site_uv">
+          访客数<span id="busuanzi_value_site_uv"></span>人次
+        </span>
       </div>
       <div class="footer-right">
-        <a href="http://hexo.io/" target="_blank">Hexo</a> Theme <a href="https://github.com/litten/hexo-theme-yilia"
-          target="_blank">Yilia</a> by Litten
+        &copy; 2020 imoling. All Rights Reserved.
       </div>
-
-      
-      &nbsp;<div class="fa fa-area-chart"></div>&nbsp;站点总字数:&nbsp;
-      <span class="white-color">55</span>
-      
-
-      <br>
-      <div id="sitetime"></div>
-
-      
-      
     </div>
-  </div>
   </div>
 </footer>
 
 <!-- 不蒜子计数初始值纠正 -->
-<script>
-    $(document).ready(function () {
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-        var int = setInterval(fixCount, 50);
-        var pvcountOffset = 80000;
-        var uvcountOffset = 20000;
-
-        function fixCount() {
-            if (document.getElementById("busuanzi_container_site_pv").style.display != "none") {
-                $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + pvcountOffset);
-                clearInterval(int);
-            }
-            if ($("#busuanzi_container_site_pv").css("display") != "none") {
-                $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + uvcountOffset); // 加上初始数据 
-                clearInterval(int);
-            }
-        }
-    });
-</script>
 
 <script language=javascript>
-    function siteTime() {
-        window.setTimeout("siteTime()", 1000);
-        var seconds = 1000;
-        var minutes = seconds * 60;
-        var hours = minutes * 60;
-        var days = hours * 24;
-        var years = days * 365;
-        var today = new Date();
-        var todayYear = today.getFullYear();
-        var todayMonth = today.getMonth() + 1;
-        var todayDate = today.getDate();
-        var todayHour = today.getHours();
-        var todayMinute = today.getMinutes();
-        var todaySecond = today.getSeconds();
-        /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
-        year - 作为date对象的年份，为4位年份值
-        month - 0-11之间的整数，做为date对象的月份
-        day - 1-31之间的整数，做为date对象的天数
-        hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
-        minutes - 0-59之间的整数，做为date对象的分钟数
-        seconds - 0-59之间的整数，做为date对象的秒数
-        microseconds - 0-999之间的整数，做为date对象的毫秒数 */
-        var t1 = Date.UTC(2016, 04, 25, 00, 00, 00); //北京时间2018-2-13 00:00:00
-        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-        var diff = t2 - t1;
-        var diffYears = Math.floor(diff / years);
-        var diffDays = Math.floor((diff / days) - diffYears * 365);
-        var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-        var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
-        var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds);
-        document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-    }/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
-    siteTime();
+  function siteTime() {
+    window.setTimeout("siteTime()", 1000);
+    var seconds = 1000;
+    var minutes = seconds * 60;
+    var hours = minutes * 60;
+    var days = hours * 24;
+    var years = days * 365;
+    var today = new Date();
+    var todayYear = today.getFullYear();
+    var todayMonth = today.getMonth() + 1;
+    var todayDate = today.getDate();
+    var todayHour = today.getHours();
+    var todayMinute = today.getMinutes();
+    var todaySecond = today.getSeconds();
+    /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+    year - 作为date对象的年份，为4位年份值
+    month - 0-11之间的整数，做为date对象的月份
+    day - 1-31之间的整数，做为date对象的天数
+    hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+    minutes - 0-59之间的整数，做为date对象的分钟数
+    seconds - 0-59之间的整数，做为date对象的秒数
+    microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+    var t1 = Date.UTC(2016, 04, 25, 00, 00, 00); //北京时间2018-2-13 00:00:00
+    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+    var diff = t2 - t1;
+    var diffYears = Math.floor(diff / years);
+    var diffDays = Math.floor((diff / days) - diffYears * 365);
+    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes);
+    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes *
+      minutes) / seconds);
+    document.getElementById("sitetime").innerHTML = "本站已运行 " + diffYears + " 年 " + diffDays + " 天 " + diffHours +
+      " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+  } /*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/
+  siteTime();
+
 </script>
+
     </div>
     <script>
 	var yiliaConfig = {
@@ -431,7 +417,95 @@
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://ahqmh.cn" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>暂无</a>
+              <a href="/小" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>0</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/美" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>1</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/的" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>2</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/博" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>3</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/客" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>4</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/：" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>5</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/h" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>6</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/t" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>7</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/t" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>8</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/p" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>9</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/:" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>10</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>11</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>12</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/s" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>13</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/a" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>14</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/b" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>15</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/e" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>16</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/r" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>17</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/z" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>18</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/y" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>19</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/." target="_blank" class="search-title"><i class="icon-quo-left icon"></i>20</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/m" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>21</a>
+            </li>
+          
+            <li class="search-li">
+              <a href="/e" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>22</a>
             </li>
           
         </ul>
