@@ -6,6 +6,9 @@
   <p>
     Perceive · Think · Execute
   </p>
+  <p>
+    <strong>English</strong> | <a href="README_CN.md">简体中文</a>
+  </p>
 </div>
 
 ---
